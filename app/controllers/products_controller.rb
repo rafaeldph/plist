@@ -2,9 +2,15 @@ class ProductsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
+    @products = Product.all
   end
 
   def show
+    @product = Product.find_by_id(params[:id])
+
+    return redirect_to root_path if @product.nil?
+
+    @title = @product.name
   end
 
   def create

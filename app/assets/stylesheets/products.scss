@@ -1,3 +1,41 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    > .product-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
+        height: 100px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 20px;
+
+        > * {
+            max-height: 50px;
+        }
+
+        h3, p {
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+table, th, td {
+    border: 1px solid #888;
+}
+td, th {
+    padding: 4px;
+}

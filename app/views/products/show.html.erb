@@ -1,2 +1,19 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1><%= @product.name %></h1>
+<p><%= @product.description %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th><%= t('products.variant') %></th>
+            <th><%= t('products.price') %></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @product.variants.each do |variant| %>
+            <tr>
+                <td><%= variant.name %></td>
+                <td><%= number_to_currency(variant.price) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

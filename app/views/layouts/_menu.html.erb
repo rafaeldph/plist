@@ -1,0 +1,4 @@
+<div class="main-menu">
+  <%= link_to t('products.title'), root_path, class: "main-menu-item#{current_page?(root_path) ? ' active' : ''}" %>
+  <%= link_to t('dashboard.title'), dashboard_path, class: "main-menu-item#{current_page?(dashboard_path) ? ' active' : ''}" %>
+</div>

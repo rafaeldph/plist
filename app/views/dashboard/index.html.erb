@@ -1,2 +1,14 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div class="kpi-container">
+    <div class="kpi-item">
+        <h2><%= @attempted_products %></h2>
+        <p><%= t('dashboard.total_products') %></p>
+    </div>
+    <div class="kpi-item">
+        <h2><%= @valid_products %></h2>
+        <p><%= t('dashboard.success_products') %></p>
+    </div>
+    <div class="kpi-item">
+        <h2><%= (@attempted_products - @valid_products) %></h2>
+        <p><%= t('dashboard.failed_products') %></p>
+    </div>
+</div>

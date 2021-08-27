@@ -1,0 +1,11 @@
+es:
+  dashboard:
+    title: "Dashboard"
+    total_products: "Productos intentados"
+    success_products: "Productos cargados"
+    failed_products: "Productos fallidos"
+  products:
+    title: "Productos"
+    show_details: "Ver detalles"
+    variant: "Variante"
+    price: "Precio"
