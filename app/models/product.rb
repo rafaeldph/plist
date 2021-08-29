@@ -8,6 +8,8 @@ class Product < ApplicationRecord
       variants: product['variants'].select {|variant| Variant.is_valid?(variant)}
     }}
 
+    return unless valid_products.length > 0
+
     products = Product.insert_all(valid_products.map {|product| { 
       name: product[:name], 
       description: product[:description], 
